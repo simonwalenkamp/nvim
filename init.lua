@@ -1,3 +1,8 @@
+if vim.g.vscode then
+  -- VSCode Neovim
+  require "custom.vscode_keymap"
+else
+
 -- Update PATH to include npm global binaries
 vim.env.PATH = vim.env.PATH .. ';C:\\Users\\Simon\\AppData\\Roaming\\npm'
 
@@ -926,3 +931,5 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+end
