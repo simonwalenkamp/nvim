@@ -14,6 +14,9 @@ else
   vim.opt.scrolloff = 13
   vim.opt.cursorline = true
 
+  vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center' })
+  vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center' })
+
   -- Enable mouse mode, can be useful for resizing splits for example!
   vim.opt.mouse = 'a'
 
