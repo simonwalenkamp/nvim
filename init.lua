@@ -14,6 +14,9 @@ else
   vim.opt.scrolloff = 13
   vim.opt.cursorline = true
 
+  -- Disables Copilot - the pluging was installed for the chat stuff
+  vim.g.copilot_enabled = false
+
   vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center' })
   vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center' })
 
