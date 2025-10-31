@@ -1,4 +1,3 @@
 require("walenkamp.remap")
-require("walenkamp.lazy")
+require("walenkamp.lazy_init")
 require("walenkamp.set")
-
