@@ -3,6 +3,9 @@ return {
 	tag = "0.1.8",
 	config = function()
 		require("telescope").setup({
+			defaults = {
+				path_display = { "truncate" },
+			},
 			pickers = {
 				buffers = {
 					sort_lastused = true,
