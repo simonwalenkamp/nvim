@@ -20,6 +20,9 @@ return {
 			vim.keymap.set("n", "<leader>ws", function()
 				require("metals").hover_worksheet()
 			end)
+			vim.keymap.set("n", "<leader>ma", function()
+				require("telescope").extensions.metals.commands()
+			end)
 		end
 
 		return metals_config
