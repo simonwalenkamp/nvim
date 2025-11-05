@@ -7,6 +7,14 @@ return {
 				path_display = { "truncate" },
 			},
 			pickers = {
+				find_files = {
+					hidden = true,
+				},
+				live_grep = {
+					additional_args = function()
+						return { "--hidden" }
+					end,
+				},
 				buffers = {
 					sort_lastused = true,
 					mappings = {
