@@ -5,7 +5,7 @@ return {
 	opts = {
 		keymap = {
 			preset = "default",
-			["<Tab>"] = { "select_and_accept", "fallback" },
+			["<CR>"] = { "select_and_accept", "fallback" },
 		},
 		sources = {
 			-- add lazydev to your completion providers
