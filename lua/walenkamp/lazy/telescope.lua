@@ -8,11 +8,11 @@ return {
 			},
 			pickers = {
 				find_files = {
-					hidden = true,
+					hidden = false,
 				},
 				live_grep = {
 					additional_args = function()
-						return { "--hidden" }
+						return {  }
 					end,
 				},
 				buffers = {
