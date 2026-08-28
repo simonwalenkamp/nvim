@@ -3,7 +3,7 @@ return {
   cmd = "ConformInfo",
   keys = {
     {
-      "<leader>f",
+      "<leader>fm",
       function()
         require("conform").format({ async = true, lsp_format = "fallback" })
       end,
@@ -14,6 +14,8 @@ return {
   opts = {
     formatters_by_ft = {
       hcl = { "terraform_fmt" },
+      json = { "prettier" },
+      jsonc = { "prettier" },
       lua = { "stylua" },
       sbt = { "scalafmt" },
       scala = { "scalafmt" },

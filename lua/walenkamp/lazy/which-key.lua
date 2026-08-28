@@ -15,7 +15,7 @@ return {
 		spec = {
 			{ "<leader>c", group = "code" },
 			{ "<leader>d", group = "diff" },
-			{ "<leader>f", group = "find / format" },
+			{ "<leader>fm", group = "find / format" },
 			{ "<leader>g", group = "git" },
 			{ "<leader>h", group = "git hunks" },
 			{ "<leader>m", group = "metals" },
