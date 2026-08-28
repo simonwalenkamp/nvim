@@ -37,8 +37,6 @@ return {
                 map('ga', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
                 map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
                 map('gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-                map('<leader>f', vim.lsp.buf.format, '[F]ormat document')
-
                 -- Jump to the definition of the word under your cursor.
                 --  This is where a variable was first declared, or where a function is defined, etc.
                 --  To jump back, press <C-t>.
