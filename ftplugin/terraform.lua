@@ -2,3 +2,7 @@
 vim.opt_local.tabstop = 2
 vim.opt_local.shiftwidth = 2
 vim.opt_local.expandtab = true
+
+vim.keymap.set("n", "<leader>tv", function()
+  require("walenkamp.project").terminal({ "terraform", "validate" })
+end, { buffer = true, desc = "Terraform validate" })
