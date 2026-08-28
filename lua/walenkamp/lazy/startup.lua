@@ -1,6 +1,6 @@
 return {
   "startup-nvim/startup.nvim",
-  dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope-file-browser.nvim" },
+  dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
   config = function()
     local settings = {
       header = {
@@ -27,19 +27,19 @@ return {
         oldfiles_amount = 0,
       },
       body = {
-        type = "text",
+        type = "mapping",
         oldfiles_directory = false,
         align = "center",
         fold_section = false,
         title = "Body",
         margin = 5,
         content = {
-          "  ██╗     ███████╗ ██████╗  ██████╗ ",
-          "  ██║     ██╔════╝██╔════╝ ██╔═══██╗",
-          "  ██║     █████╗  ██║  ███╗██║   ██║",
-          "  ██║     ██╔══╝  ██║   ██║██║   ██║",
-          "  ███████╗███████╗╚██████╔╝╚██████╔╝",
-          "  ╚══════╝╚══════╝ ╚═════╝  ╚═════╝ ",
+          { "Find file", "lua require('telescope.builtin').find_files({ cwd = require('walenkamp.project').root() })", "f" },
+          { "Grep files", "lua require('telescope.builtin').live_grep({ cwd = require('walenkamp.project').root() })", "g" },
+          { "Recent files", "Telescope oldfiles", "r" },
+          { "New file", "lua require('startup').new_file()", "n" },
+          { "Edit config", "edit " .. vim.fn.stdpath("config") .. "/init.lua", "c" },
+          { "Quit", "quit", "q" },
         },
         highlight = "String",
         default_color = "",
