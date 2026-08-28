@@ -16,13 +16,13 @@ return {
 
 		metals_config.capabilities = require("blink.cmp").get_lsp_capabilities()
 
-		metals_config.on_attach = function(client, bufnr)
+		metals_config.on_attach = function(_, bufnr)
 			vim.keymap.set("n", "<leader>ws", function()
 				require("metals").hover_worksheet()
-			end)
+			end, { buffer = bufnr, desc = "Metals worksheet hover" })
 			vim.keymap.set("n", "<leader>ma", function()
 				require("telescope").extensions.metals.commands()
-			end)
+			end, { buffer = bufnr, desc = "Metals commands" })
 		end
 
 		return metals_config
