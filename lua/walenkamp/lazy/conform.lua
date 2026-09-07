@@ -20,6 +20,7 @@ return {
       sbt = { "scalafmt" },
       scala = { "scalafmt" },
       terraform = { "terraform_fmt" },
+      markdown = { "prettier" }
     },
     default_format_opts = {
       lsp_format = "fallback",
